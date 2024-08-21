@@ -6,5 +6,11 @@ module.exports = {
   paths:{
     // 设置hardhat的编译目录
     artifacts: "./src/artifacts"
-  }
+  },
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 100,
+    },
+  },
 };

@@ -1,13 +1,39 @@
-# Sample Hardhat Project
+## 1 : 合约测试
+基本实现RCCStake主要功能点的覆盖测试
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+![20240821151426.png](images/20240821151426.png)
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+## 2  前端简单实现MetaMask连接 
+
+
+由于speolia测试网络上的余额不够交易，连接MetaMask主动询问切换本地hardhat网络
+
+![20240821151646.png](images/20240821151646.png)
+![20240821151910.png](images/20240821151910.png)
+![20240821151944.png](images/20240821151944.png)
+
+
+
+## 3 测试合约读取操作
+
+读取RCCStake合约的结束区块，默认是0
+![20240821152033.png](images/20240821152033.png)
+
+
+
+
+
+
+## 4 测试合约写入操作
+代码默认写入100
+![20240709223647390](images/20240821152252.png)
+
+写入成功：
+![20240821152429](images/20240821152429.png)
+  
+
+## 5 后续优化
+1.除了原生货币pool,同时新开stake token是erc20Token的pool
+
+2.学习点前端，完善下交互页面，实现从质押到解除质押，提取奖励的全流程页面交互
